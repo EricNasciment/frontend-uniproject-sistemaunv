@@ -58,7 +58,7 @@ export default function Login() {
             Uni<span className="text-gold-400">Project</span>
           </span>
           <p className="text-slate-muted text-sm mt-2 tracking-widest uppercase font-body">
-            Sistema Universitário
+            Sistema Universitário v1.0
           </p>
         </div>
 
