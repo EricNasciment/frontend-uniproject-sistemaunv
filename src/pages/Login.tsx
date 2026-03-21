@@ -64,9 +64,9 @@ export default function Login() {
 
         <div>
           <blockquote className="font-display text-3xl italic text-white/80 leading-relaxed">
-            "A educação é a arma mais poderosa que você pode usar para mudar o mundo."
+            "Com grandes poderes, vêm grandes responsabilidades."
           </blockquote>
-          <p className="mt-4 text-slate-muted text-sm">— Nelson Mandela</p>
+          <p className="mt-4 text-slate-muted text-sm">— Aranha Humana</p>
         </div>
 
         <div className="flex gap-6 text-sm text-slate-muted">
