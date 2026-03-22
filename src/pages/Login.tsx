@@ -58,15 +58,15 @@ export default function Login() {
             Uni<span className="text-gold-400">Project</span>
           </span>
           <p className="text-slate-muted text-sm mt-2 tracking-widest uppercase font-body">
-            Sistema Universitário v1.0
+            Sistema Universitário v1.1
           </p>
         </div>
 
         <div>
           <blockquote className="font-display text-3xl italic text-white/80 leading-relaxed">
-            "Com grandes poderes, vêm grandes responsabilidades."
+            "A vingança nunca é plena."
           </blockquote>
-          <p className="mt-4 text-slate-muted text-sm">— Aranha Humana</p>
+          <p className="mt-4 text-slate-muted text-sm">— Sr Madruga</p>
         </div>
 
         <div className="flex gap-6 text-sm text-slate-muted">
