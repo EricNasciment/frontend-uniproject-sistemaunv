@@ -33,5 +33,5 @@ jobs:
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
-          projectId: "unifor-uni-projectr"
+          projectId: "unifor-uni-project"
           channelId: "pr-${{ github.event.pull_request.number }}"
