@@ -58,13 +58,13 @@ export default function Login() {
             Uni<span className="text-gold-400">Project</span>
           </span>
           <p className="text-slate-muted text-sm mt-2 tracking-widest uppercase font-body">
-            Sistema Universitário v1.1
+            Sistema Universitário v1.2
           </p>
         </div>
 
         <div>
           <blockquote className="font-display text-3xl italic text-white/80 leading-relaxed">
-            "A vingança nunca é plena."
+            "A vingança nunca é plena mata a alma e envenena."
           </blockquote>
           <p className="mt-4 text-slate-muted text-sm">— Sr Madruga</p>
         </div>
