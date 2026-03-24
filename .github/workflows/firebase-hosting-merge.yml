@@ -1,33 +1,34 @@
-name: Deploy to Production (Firebase Hosting)
+name: Deploy em Produção (Firebase Hosting)
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Fazer checkout do repositório
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: "npm"
 
-      - name: Install dependencies
-        run: npm install
+      - name: Instalar dependências
+        run: npm ci
 
-      - name: Create .env file from FIREBASE_CONFIG secret
+      - name: Criar arquivo .env a partir do secret FIREBASE_CONFIG
         run: |
           echo "${{ secrets.FIREBASE_CONFIG }}" > .env
-          
-      - name: Build project
+
+      - name: Gerar build do projeto
         run: npm run build
 
-      - name: Deploy to Firebase Hosting (Production)
+      - name: Fazer deploy em produção no Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
