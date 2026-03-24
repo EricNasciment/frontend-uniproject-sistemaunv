@@ -51,7 +51,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             Uni<span className="text-gold-400">Project</span>
           </span>
           <p className="text-xs text-slate-muted mt-1 font-body tracking-widest uppercase">
-            Sistema Universitário
+            Sistema Universitário v1.3
           </p>
         </div>
 
