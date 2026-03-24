@@ -1,8 +1,8 @@
-name: Deploy Preview (Firebase Hosting)
+name: Deploy de Preview (Firebase Hosting)
 
 on:
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 permissions:
   checks: write
@@ -14,23 +14,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Fazer checkout do repositório
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-         node-version: 20
+          node-version: 20
+          cache: "npm" # usa package-lock.json para chavear o cache automaticamente
 
-      - name: Install dependencies
-        run: npm install
-      - name: Create .env file from FIREBASE_CONFIG secret
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Criar arquivo .env a partir do secret FIREBASE_CONFIG
         run: |
-         echo "${{ secrets.FIREBASE_CONFIG }}" > .env
-      - name: Build project
+          echo "${{ secrets.FIREBASE_CONFIG }}" > .env
+
+      - name: Gerar build do projeto
         run: npm run build
 
-      - name: Deploy to Firebase Hosting (Preview)
+      - name: Fazer deploy de preview no Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
